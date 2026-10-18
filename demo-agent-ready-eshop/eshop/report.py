@@ -139,7 +139,8 @@ v placené verzi měříme opakovaně, týdně a i v ChatGPT, Gemini a Perplexit
 
 
 def render(shop: str, summary: dict, scores: list[ProductScore], site: SiteReport | None,
-           results: list[Result], probes: list[Probe]) -> str:
+           results: list[Result], probes: list[Probe], run_date: str | None = None) -> str:
+    shown = date.fromisoformat(run_date) if run_date else date.today()
     feed_score = summary["score"]
     known = site and not site.error and bool(site.bots)
     search_ok = known and all(site.bots.get(b) for b in SEARCH_BOTS)
@@ -148,7 +149,7 @@ def render(shop: str, summary: dict, scores: list[ProductScore], site: SiteRepor
     return f"""<!doctype html><html lang="cs"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1"><title>AI readiness audit – {escape(shop)}</title>
 <style>{CSS}</style></head><body><main>
-<h1>AI readiness audit</h1><div class="muted">{escape(shop)} · {date.today().strftime('%-d. %-m. %Y')} ·
+<h1>AI readiness audit</h1><div class="muted">{escape(shop)} · {shown.day}. {shown.month}. {shown.year} ·
 {summary['products']} produktů ve feedu</div>
 <div class="grid" style="margin-top:20px">
 <div class="card"><div class="muted">Kvalita dat pro AI</div><div class="kpi {_cls(feed_score)}">{feed_score}/100</div></div>

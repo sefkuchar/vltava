@@ -90,6 +90,9 @@ def check_site(product_urls: list[str], base: str | None = None, max_pages: int 
     if not base and product_urls:
         u = urlparse(product_urls[0])
         base = f"{u.scheme}://{u.netloc}"
+    elif base:
+        # URL z feedu presmerujeme na zadaný web (napr. testovacia kópia obchodu na localhoste)
+        product_urls = [base.rstrip("/") + urlparse(u).path for u in product_urls]
     report = SiteReport(base or "")
     if not base:
         report.error = "Neznámá doména"

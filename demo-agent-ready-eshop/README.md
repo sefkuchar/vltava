@@ -21,6 +21,26 @@ a súbory, ktoré vie hneď nasadiť. Toto je nástroj na „zdarma mini-audit�
 - `jsonld/*.json` – schema.org Product na vloženie do šablóny
 - `audit.json` – surové skóre
 
+## Porovnanie pred / po (v1 → v2) a opakovateľné reporty
+
+Postup je v [AUDIT-POSTUP.md](AUDIT-POSTUP.md). Každý beh uloží deterministickú snímku `audit.json` a z nej
+`report.md` zo šablóny `templates/report.md`. `compare.py` porovná dva behy cez šablónu `templates/compare.md`.
+Rovnaký vstup dá bajtovo rovnaký výstup (overené dvojitým behom a `diff`).
+
+```bash
+./run_compare_demo.sh      # fiktívny obchod v1 (pred) vs v2 (po úpravách z reportu), vrátane lokálneho webu
+open out/compare-v1-v2.md
+```
+
+| | v1 (pred) | v2 (po) |
+|---|---|---|
+| Kvalita dát pre AI | 57/100 | 100/100 |
+| Vyhľadávacie AI boty | blokované OAI-SearchBot, PerplexityBot | povolené |
+| schema.org Product | 0/12 stránok | 12/12 stránok |
+
+`sample/v2/heureka.xml` simuluje obchod po doplnení údajov z reportu. Doplnené hodnoty sú ilustratívne.
+Ukážkové weby generuje `sample/build_sites.py`.
+
 ## Spustenie
 
 ```bash
@@ -28,14 +48,14 @@ cd demo-agent-ready-eshop
 python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 
 # bez AI – na ukážkovom feede (fiktívny obchod so zámernými chybami)
-.venv/bin/python audit.py --feed sample/heureka-sample.xml --open
+.venv/bin/python audit.py --feed sample/v1/heureka.xml --open
 
 # reálny obchod – URL jeho Heureka feedu (nájdeš v administrácii e-shopu v sekcii exportov / feedov)
 .venv/bin/python audit.py --feed https://www.obchod.cz/heureka.xml --site --open
 
 # s AI (obohatenie 5 najslabších produktov + 5 dopytov na viditeľnosť)
 export ANTHROPIC_API_KEY=sk-ant-...
-.venv/bin/python audit.py --feed sample/heureka-sample.xml --enrich 5 --visibility 5 --open
+.venv/bin/python audit.py --feed sample/v1/heureka.xml --enrich 5 --visibility 5 --open
 ```
 
 Model sa dá zmeniť cez `CLAUDE_MODEL` (predvolený `claude-opus-5-5`).
@@ -46,8 +66,8 @@ AI kroky sa dajú urobiť aj ručne, napríklad v Claude Code, a výsledky nač�
 halucinácií a tým istým generátorom reportu:
 
 ```bash
-.venv/bin/python audit.py --feed sample/heureka-sample.xml \
-  --enrichments sample/poc-enrichments.json --probes sample/poc-probes.json --open
+.venv/bin/python audit.py --feed sample/v1/heureka.xml \
+  --enrichments sample/v1/enrichments.json --probes sample/v1/probes.json --open
 ```
 
 Výsledok PoC na ukážkovom feede (18. 10. 2026):

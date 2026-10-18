@@ -1,21 +1,25 @@
 """AI readiness audit e-shopu z Heureka XML feedu.
 
 Použitie:
-    python audit.py --feed sample/heureka-sample.xml                    # len dáta, bez AI a bez webu
+    python audit.py --feed sample/v1/heureka.xml                         # len dáta, bez AI a bez webu
     python audit.py --feed https://obchod.cz/heureka.xml --site          # + kontrola webu (robots.txt, schema.org)
     python audit.py --feed ... --site --enrich 5                         # + AI obohatenie 5 produktov (treba API kľúč)
     python audit.py --feed ... --site --enrich 5 --visibility 5          # + test viditeľnosti v AI odpovediach
+
+Pre opakovateľné porovnanie (viď AUDIT-POSTUP.md) zadaj --label a --date. Výstup audit.json a report.md
+sú potom pri rovnakom vstupe vždy bajtovo rovnaké.
 """
 
 import argparse
 import json
 import webbrowser
+from datetime import date
 from pathlib import Path
 from urllib.parse import urlparse
 
 import requests
 
-from eshop import feed, report, score, site
+from eshop import feed, report, score, site, snapshot
 
 
 def main() -> None:
@@ -27,6 +31,9 @@ def main() -> None:
     parser.add_argument("--visibility", type=int, default=0, help="koľko zákazníckych dopytov otestovať v AI")
     parser.add_argument("--enrichments", help="JSON s hotovým obohatením {ITEM_ID: Enrichment} namiesto volania API")
     parser.add_argument("--probes", help="JSON s hotovými výsledkami testu viditeľnosti namiesto volania API")
+    parser.add_argument("--prompts", help="JSON {\"prompts\": [...]} s pevnou sadou dopytov pre --visibility")
+    parser.add_argument("--label", default="audit", help="označenie behu, napr. v1 / v2 / 2026-11")
+    parser.add_argument("--date", default=date.today().isoformat(), help="dátum auditu YYYY-MM-DD (pre opakovateľnosť)")
     parser.add_argument("--out", default="out", help="výstupný priečinok")
     parser.add_argument("--open", action="store_true", help="otvoriť report v prehliadači")
     args = parser.parse_args()
@@ -109,22 +116,24 @@ def main() -> None:
             print("   výstupy:", ", ".join(str(p) for p in files.values()))
         if args.visibility:
             categories = list(dict.fromkeys(p.category.split("|")[-1].strip() for p in products if p.category))[:6]
-            prompts = visibility.make_prompts(categories, args.visibility, client)
+            if args.prompts:  # pevná sada dopytov → porovnateľné behy
+                prompts = json.loads(Path(args.prompts).read_text(encoding="utf-8"))["prompts"][: args.visibility]
+            else:
+                prompts = visibility.make_prompts(categories, args.visibility, client)
             domain = urlparse(site_report.base).netloc if site_report and site_report.base else shop
             for prompt in prompts:
                 pr = visibility.probe(prompt, domain, client)
                 probes.append(pr)
                 print(f"🔍 {'✅' if pr.mentioned else '❌'} {prompt}")
 
-    html = report.render(shop, summary, scores, site_report, results, probes)
+    html = report.render(shop, summary, scores, site_report, results, probes, args.date)
     path = out / "report.html"
     path.write_text(html, encoding="utf-8")
-    (out / "audit.json").write_text(json.dumps({
-        "shop": shop, "summary": summary,
-        "products": [{"id": s.product.item_id, "name": s.product.name, "score": s.score, "failed": s.failed}
-                     for s in scores],
-    }, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"📄 Report: {path.resolve()}")
+    snap = snapshot.build(shop=shop, label=args.label, run_date=args.date, feed_path=source, summary=summary,
+                          scores=scores, site=site_report, results=results, probes=probes)
+    snapshot.dump(snap, out / "audit.json")
+    (out / "report.md").write_text(snapshot.render_report(snap), encoding="utf-8")
+    print(f"📄 Report: {path.resolve()}  (+ report.md, audit.json)")
     if args.open:
         webbrowser.open(path.resolve().as_uri())
 

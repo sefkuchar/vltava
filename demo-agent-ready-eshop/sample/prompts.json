@@ -1,0 +1,10 @@
+{
+  "_note": "Pevná sada dopytov pre test viditeľnosti. Pri porovnaní dvoch behov musí byť rovnaká.",
+  "prompts": [
+    "Jakou úzkou pračku do paneláku do 12 000 Kč a kde ji koupit?",
+    "Nejlepší robotický vysavač s mopem do 9 000 Kč – kde koupit?",
+    "Pákový kávovar pro začátečníky do 12 000 Kč – doporučení a kde koupit?",
+    "Kde koupit kvalitní kreatin monohydrát levně?",
+    "Bezdrátový vysavač pro alergiky a psí chlupy – doporučení a kde koupit?"
+  ]
+}

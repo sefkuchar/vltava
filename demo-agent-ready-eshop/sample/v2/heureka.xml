@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Verzia 2 fiktívneho obchodu: majiteľ doplnil, čo odporúčal audit v1 (EAN, výrobca, parametre, kategórie, popisy)
+     a nasadil obohatené dáta. Doplnené hodnoty sú ILUSTRATÍVNE (simulácia), nie overené údaje výrobcov. -->
+<SHOP>
+  <SHOPITEM>
+    <ITEM_ID>PR-1001</ITEM_ID>
+    <PRODUCTNAME>Úzká pračka Electrolux EW6SN426BC 6 kg, hloubka 38 cm</PRODUCTNAME>
+    <PRODUCT>Pračka Electrolux EW6SN426BC úzká 6 kg</PRODUCT>
+    <DESCRIPTION>Úzká pračka s předním plněním, hloubka jen 38 cm, ideální do menší koupelny v paneláku. Kapacita 6 kg, 1200 otáček, energetická třída A. Hlučnost při ždímání 76 dB. Funkce SensiCare přizpůsobí délku programu množství prádla. Parní program pro osvěžení oblečení.</DESCRIPTION>
+    <URL>https://www.domacipomocnik.example/pracka-electrolux-ew6sn426bc</URL>
+    <IMGURL>https://www.domacipomocnik.example/img/ew6sn426bc.jpg</IMGURL>
+    <PRICE_VAT>9990</PRICE_VAT>
+    <MANUFACTURER>Electrolux</MANUFACTURER>
+    <CATEGORYTEXT>Heureka.cz | Bílé zboží | Pračky</CATEGORYTEXT>
+    <EAN>7332543771233</EAN>
+    <DELIVERY_DATE>0</DELIVERY_DATE>
+    <PARAM><PARAM_NAME>Kapacita</PARAM_NAME><VAL>6 kg</VAL></PARAM>
+    <PARAM><PARAM_NAME>Typ plnění</PARAM_NAME><VAL>přední</VAL></PARAM>
+    <PARAM><PARAM_NAME>Hloubka</PARAM_NAME><VAL>38 cm</VAL></PARAM>
+    <PARAM><PARAM_NAME>Otáčky při ždímání</PARAM_NAME><VAL>1200 ot./min</VAL></PARAM>
+    <PARAM><PARAM_NAME>Energetická třída</PARAM_NAME><VAL>A</VAL></PARAM>
+    <PARAM><PARAM_NAME>Hlučnost při ždímání</PARAM_NAME><VAL>76 dB</VAL></PARAM>
+  </SHOPITEM>
+  <SHOPITEM>
+    <ITEM_ID>PR-1002</ITEM_ID>
+    <PRODUCTNAME>Pračka Bosch WAN28263BY 8 kg, 1400 otáček</PRODUCTNAME>
+    <DESCRIPTION>Pračka s předním plněním Bosch WAN28263BY s kapacitou 8 kg a 1400 otáčkami při ždímání. Hloubka 59 cm, energetická třída A. Funkce SpeedPerfect zkrátí dobu praní, program AllergyPlus pro alergiky. Hlučnost při ždímání 71 dB. Vhodná pro rodinu se dvěma až čtyřmi členy.</DESCRIPTION>
+    <URL>https://www.domacipomocnik.example/pracka-bosch-wan28263by</URL>
+    <IMGURL>https://www.domacipomocnik.example/img/wan28263by.jpg</IMGURL>
+    <PRICE_VAT>12490</PRICE_VAT>
+    <MANUFACTURER>Bosch</MANUFACTURER>
+    <CATEGORYTEXT>Heureka.cz | Bílé zboží | Pračky</CATEGORYTEXT>
+    <EAN>4242005123452</EAN>
+    <DELIVERY_DATE>3</DELIVERY_DATE>
+    <PARAM><PARAM_NAME>Kapacita</PARAM_NAME><VAL>8 kg</VAL></PARAM>
+    <PARAM><PARAM_NAME>Otáčky při ždímání</PARAM_NAME><VAL>1400 ot./min</VAL></PARAM>
+    <PARAM><PARAM_NAME>Hloubka</PARAM_NAME><VAL>59 cm</VAL></PARAM>
+    <PARAM><PARAM_NAME>Energetická třída</PARAM_NAME><VAL>A</VAL></PARAM>
+    <PARAM><PARAM_NAME>Hlučnost při ždímání</PARAM_NAME><VAL>71 dB</VAL></PARAM>
+  </SHOPITEM>
+  <SHOPITEM>
+    <ITEM_ID>VY-2001</ITEM_ID>
+    <PRODUCTNAME>Bezdrátový tyčový vysavač Dyson V12 Detect Slim s HEPA filtrací</PRODUCTNAME>
+    <DESCRIPTION>Bezdrátový tyčový vysavač s laserovou detekcí prachu. Výdrž baterie až 60 minut, hmotnost 2,2 kg, objem nádoby 0,35 l. Piezo senzor počítá částice a automaticky zvyšuje sací výkon. HEPA filtrace zachytí 99,99 % částic, vhodný pro alergiky. Součástí balení je hubice na zvířecí chlupy.</DESCRIPTION>
+    <URL>https://www.domacipomocnik.example/dyson-v12-detect-slim</URL>
+    <IMGURL>https://www.domacipomocnik.example/img/dyson-v12.jpg</IMGURL>
+    <PRICE_VAT>15990</PRICE_VAT>
+    <MANUFACTURER>Dyson</MANUFACTURER>
+    <CATEGORYTEXT>Heureka.cz | Malé spotřebiče | Vysavače | Tyčové vysavače</CATEGORYTEXT>
+    <EAN>5025155072349</EAN>
+    <DELIVERY_DATE>0</DELIVERY_DATE>
+    <PARAM><PARAM_NAME>Napájení</PARAM_NAME><VAL>bezdrátový (baterie)</VAL></PARAM>
+    <PARAM><PARAM_NAME>Výdrž baterie</PARAM_NAME><VAL>až 60 min</VAL></PARAM>
+    <PARAM><PARAM_NAME>Hmotnost</PARAM_NAME><VAL>2,2 kg</VAL></PARAM>
+    <PARAM><PARAM_NAME>Objem nádoby</PARAM_NAME><VAL>0,35 l</VAL></PARAM>
+    <PARAM><PARAM_NAME>Filtrace</PARAM_NAME><VAL>HEPA, 99,99 % částic</VAL></PARAM>
+  </SHOPITEM>
+  <SHOPITEM>
+    <ITEM_ID>VY-2002</ITEM_ID>
+    <PRODUCTNAME>Robotický vysavač s mopem Roborock Q7 Max</PRODUCTNAME>
+    <DESCRIPTION>Robotický vysavač s mopem Roborock Q7 Max se sacím výkonem 4200 Pa a laserovou navigací LiDAR pro přesné mapování bytu. Výdrž baterie až 180 minut, uklidí až 300 m² na jedno nabití. Ovládání a nastavení zón přes aplikaci. Nádržka na vodu 350 ml s elektronickou regulací průtoku.</DESCRIPTION>
+    <URL>https://www.domacipomocnik.example/roborock-q7-max</URL>
+    <IMGURL>https://www.domacipomocnik.example/img/roborock-q7-max.jpg</IMGURL>
+    <PRICE_VAT>8490</PRICE_VAT>
+    <MANUFACTURER>Roborock</MANUFACTURER>
+    <CATEGORYTEXT>Heureka.cz | Malé spotřebiče | Vysavače | Robotické vysavače</CATEGORYTEXT>
+    <EAN>6970995781236</EAN>
+    <DELIVERY_DATE>2</DELIVERY_DATE>
+    <PARAM><PARAM_NAME>Sací výkon</PARAM_NAME><VAL>4200 Pa</VAL></PARAM>
+    <PARAM><PARAM_NAME>Navigace</PARAM_NAME><VAL>LiDAR</VAL></PARAM>
+    <PARAM><PARAM_NAME>Výdrž baterie</PARAM_NAME><VAL>až 180 min</VAL></PARAM>
+    <PARAM><PARAM_NAME>Mopování</PARAM_NAME><VAL>ano</VAL></PARAM>
+  </SHOPITEM>
+  <SHOPITEM>
+    <ITEM_ID>KA-3001</ITEM_ID>
+    <PRODUCTNAME>Automatický kávovar De'Longhi Magnifica S ECAM 22.110.B</PRODUCTNAME>
+    <DESCRIPTION>Plnoautomatický kávovar s mlýnkem na zrnkovou kávu (13 stupňů hrubosti mletí). Tlak čerpadla 15 barů, nádržka na vodu 1,8 l. Ruční napěňovač mléka pro přípravu cappuccina. Lze použít i mletou kávu. Automatické čištění a odvápnění.</DESCRIPTION>
+    <URL>https://www.domacipomocnik.example/delonghi-magnifica-s</URL>
+    <IMGURL>https://www.domacipomocnik.example/img/ecam22110b.jpg</IMGURL>
+    <PRICE_VAT>7490</PRICE_VAT>
+    <MANUFACTURER>De'Longhi</MANUFACTURER>
+    <CATEGORYTEXT>Heureka.cz | Malé spotřebiče | Kávovary | Automatické kávovary</CATEGORYTEXT>
+    <EAN>8004399325463</EAN>
+    <DELIVERY_DATE>0</DELIVERY_DATE>
+    <PARAM><PARAM_NAME>Tlak</PARAM_NAME><VAL>15 bar</VAL></PARAM>
+    <PARAM><PARAM_NAME>Objem nádržky</PARAM_NAME><VAL>1,8 l</VAL></PARAM>
+    <PARAM><PARAM_NAME>Mlýnek</PARAM_NAME><VAL>ano, 13 stupňů mletí</VAL></PARAM>
+    <PARAM><PARAM_NAME>Napěňovač mléka</PARAM_NAME><VAL>ruční</VAL></PARAM>
+  </SHOPITEM>
+  <SHOPITEM>
+    <ITEM_ID>KA-3002</ITEM_ID>
+    <PRODUCTNAME>Pákový kávovar Sage the Bambino Plus</PRODUCTNAME>
+    <DESCRIPTION>Pákový kávovar Sage the Bambino Plus, ohřev za 3 sekundy, automatická parní tryska na mléko, tlak 9 barů při extrakci, nádržka 1,9 l. Nemá vestavěný mlýnek, používá se mletá káva. Příkon 1600 W, rozměry 19,5 × 32 × 31 cm. Vhodný pro domácí přípravu espressa, cappuccina a latte.</DESCRIPTION>
+    <URL>https://www.domacipomocnik.example/sage-bambino-plus</URL>
+    <IMGURL>https://www.domacipomocnik.example/img/bambino.jpg</IMGURL>
+    <PRICE_VAT>11990</PRICE_VAT>
+    <MANUFACTURER>Sage</MANUFACTURER>
+    <CATEGORYTEXT>Heureka.cz | Malé spotřebiče | Kávovary | Pákové kávovary</CATEGORYTEXT>
+    <EAN>9312432123457</EAN>
+    <DELIVERY_DATE>2</DELIVERY_DATE>
+    <PARAM><PARAM_NAME>Doba ohřevu</PARAM_NAME><VAL>3 s</VAL></PARAM>
+    <PARAM><PARAM_NAME>Tlak při extrakci</PARAM_NAME><VAL>9 bar</VAL></PARAM>
+    <PARAM><PARAM_NAME>Objem nádržky na vodu</PARAM_NAME><VAL>1,9 l</VAL></PARAM>
+    <PARAM><PARAM_NAME>Napěňování mléka</PARAM_NAME><VAL>automatická parní tryska</VAL></PARAM>
+    <PARAM><PARAM_NAME>Příkon</PARAM_NAME><VAL>1600 W</VAL></PARAM>
+  </SHOPITEM>
+  <SHOPITEM>
+    <ITEM_ID>DV-4001</ITEM_ID>
+    <PRODUCTNAME>Syrovátkový protein Nutrend Compress Whey 1000 g čokoláda</PRODUCTNAME>
+    <DESCRIPTION>Syrovátkový proteinový koncentrát, 22 g bílkovin v jedné dávce (30 g). Obsahuje BCAA a glutamin. Bez přidaného cukru, slazeno sukralózou. Vhodné po tréninku. Balení vystačí na 33 dávek. Dobře rozpustný ve vodě i v mléce.</DESCRIPTION>
+    <URL>https://www.domacipomocnik.example/nutrend-compress-whey-1000</URL>
+    <IMGURL>https://www.domacipomocnik.example/img/compress-whey.jpg</IMGURL>
+    <PRICE_VAT>749</PRICE_VAT>
+    <MANUFACTURER>Nutrend</MANUFACTURER>
+    <CATEGORYTEXT>Heureka.cz | Sport | Sportovní výživa | Proteiny</CATEGORYTEXT>
+    <EAN>8594014868371</EAN>
+    <DELIVERY_DATE>0</DELIVERY_DATE>
+    <PARAM><PARAM_NAME>Hmotnost balení</PARAM_NAME><VAL>1000 g</VAL></PARAM>
+    <PARAM><PARAM_NAME>Bílkoviny v dávce</PARAM_NAME><VAL>22 g / 30 g</VAL></PARAM>
+    <PARAM><PARAM_NAME>Počet dávek</PARAM_NAME><VAL>33</VAL></PARAM>
+    <PARAM><PARAM_NAME>Příchuť</PARAM_NAME><VAL>čokoláda</VAL></PARAM>
+  </SHOPITEM>
+  <SHOPITEM>
+    <ITEM_ID>DV-4002</ITEM_ID>
+    <PRODUCTNAME>Kreatin monohydrát 100 % Domácí Pomocník Sport 500 g</PRODUCTNAME>
+    <DESCRIPTION>Čistý kreatin monohydrát (100 %) bez příměsí a bez přidaného cukru, mikronizovaný pro lepší rozpustnost. Doporučená dávka 5 g denně, balení 500 g vystačí na 100 dávek. Vhodný pro silové sporty a vysoce intenzivní trénink. Vyrobeno v EU, každá šarže testována nezávislou laboratoří.</DESCRIPTION>
+    <URL>https://www.domacipomocnik.example/kreatin-500</URL>
+    <IMGURL>https://www.domacipomocnik.example/img/kreatin.jpg</IMGURL>
+    <PRICE_VAT>399</PRICE_VAT>
+    <MANUFACTURER>Domácí Pomocník Sport</MANUFACTURER>
+    <CATEGORYTEXT>Heureka.cz | Sport | Sportovní výživa | Kreatin</CATEGORYTEXT>
+    <EAN>8590001234563</EAN>
+    <DELIVERY_DATE>1</DELIVERY_DATE>
+    <PARAM><PARAM_NAME>Hmotnost balení</PARAM_NAME><VAL>500 g</VAL></PARAM>
+    <PARAM><PARAM_NAME>Forma kreatinu</PARAM_NAME><VAL>monohydrát, mikronizovaný</VAL></PARAM>
+    <PARAM><PARAM_NAME>Čistota</PARAM_NAME><VAL>100 %</VAL></PARAM>
+    <PARAM><PARAM_NAME>Počet dávek</PARAM_NAME><VAL>100</VAL></PARAM>
+  </SHOPITEM>
+  <SHOPITEM>
+    <ITEM_ID>SP-5001</ITEM_ID>
+    <PRODUCTNAME>Běžecké boty Salomon Speedcross 6 GTX pánské</PRODUCTNAME>
+    <DESCRIPTION>Trailové běžecké boty s membránou Gore-Tex, nepromokavé. Agresivní dezén Contagrip s hloubkou 6 mm pro bláto a měkký terén. Drop 10 mm, hmotnost 330 g (vel. 42). Rychlé šněrování Quicklace. Skladem velikosti 41–46.</DESCRIPTION>
+    <URL>https://www.domacipomocnik.example/salomon-speedcross-6-gtx</URL>
+    <IMGURL>https://www.domacipomocnik.example/img/speedcross6.jpg</IMGURL>
+    <PRICE_VAT>4290</PRICE_VAT>
+    <MANUFACTURER>Salomon</MANUFACTURER>
+    <CATEGORYTEXT>Heureka.cz | Sport | Běh | Běžecké boty</CATEGORYTEXT>
+    <EAN>0195751231237</EAN>
+    <DELIVERY_DATE>0</DELIVERY_DATE>
+    <PARAM><PARAM_NAME>Velikost</PARAM_NAME><VAL>42</VAL></PARAM>
+    <PARAM><PARAM_NAME>Barva</PARAM_NAME><VAL>černá</VAL></PARAM>
+    <PARAM><PARAM_NAME>Membrána</PARAM_NAME><VAL>Gore-Tex</VAL></PARAM>
+    <PARAM><PARAM_NAME>Drop</PARAM_NAME><VAL>10 mm</VAL></PARAM>
+  </SHOPITEM>
+  <SHOPITEM>
+    <ITEM_ID>SP-5002</ITEM_ID>
+    <PRODUCTNAME>Silniční běžecké boty Domácí Pomocník Sport Run Road 2 pánské</PRODUCTNAME>
+    <DESCRIPTION>Silniční běžecké boty pro tréninky na asfaltu a zpevněných cestách. Odpružená mezipodešev z EVA pěny, drop 8 mm, hmotnost 280 g (vel. 42). Prodyšný síťovaný svršek, reflexní prvky pro běh za tmy. Skladem velikosti 40–46.</DESCRIPTION>
+    <URL>https://www.domacipomocnik.example/boty-beh</URL>
+    <IMGURL>https://www.domacipomocnik.example/img/run-road-2.jpg</IMGURL>
+    <PRICE_VAT>1990</PRICE_VAT>
+    <MANUFACTURER>Domácí Pomocník Sport</MANUFACTURER>
+    <CATEGORYTEXT>Heureka.cz | Sport | Běh | Běžecké boty</CATEGORYTEXT>
+    <EAN>8590001234570</EAN>
+    <DELIVERY_DATE>2</DELIVERY_DATE>
+    <PARAM><PARAM_NAME>Povrch</PARAM_NAME><VAL>silnice, zpevněné cesty</VAL></PARAM>
+    <PARAM><PARAM_NAME>Drop</PARAM_NAME><VAL>8 mm</VAL></PARAM>
+    <PARAM><PARAM_NAME>Hmotnost</PARAM_NAME><VAL>280 g (vel. 42)</VAL></PARAM>
+    <PARAM><PARAM_NAME>Velikosti skladem</PARAM_NAME><VAL>40–46</VAL></PARAM>
+  </SHOPITEM>
+  <SHOPITEM>
+    <ITEM_ID>DO-6001</ITEM_ID>
+    <PRODUCTNAME>Čistička vzduchu Xiaomi Smart Air Purifier 4</PRODUCTNAME>
+    <DESCRIPTION>Čistička vzduchu pro místnosti do 48 m², CADR 400 m³/h, True HEPA filtr, ovládání přes aplikaci Mi Home. Noční režim s hlučností 32,1 dB. Displej s aktuální hodnotou PM2,5. Vhodná pro alergiky a do bytů u rušné silnice.</DESCRIPTION>
+    <URL>https://www.domacipomocnik.example/xiaomi-air-purifier-4</URL>
+    <IMGURL>https://www.domacipomocnik.example/img/xiaomi-ap4.jpg</IMGURL>
+    <PRICE_VAT>4490</PRICE_VAT>
+    <MANUFACTURER>Xiaomi</MANUFACTURER>
+    <CATEGORYTEXT>Heureka.cz | Domácnost | Čističky vzduchu</CATEGORYTEXT>
+    <EAN>6934177778957</EAN>
+    <DELIVERY_DATE>0</DELIVERY_DATE>
+    <PARAM><PARAM_NAME>Plocha místnosti</PARAM_NAME><VAL>do 48 m²</VAL></PARAM>
+    <PARAM><PARAM_NAME>CADR</PARAM_NAME><VAL>400 m³/h</VAL></PARAM>
+    <PARAM><PARAM_NAME>Filtr</PARAM_NAME><VAL>True HEPA</VAL></PARAM>
+    <PARAM><PARAM_NAME>Hlučnost v nočním režimu</PARAM_NAME><VAL>32,1 dB</VAL></PARAM>
+  </SHOPITEM>
+  <SHOPITEM>
+    <ITEM_ID>DO-6002</ITEM_ID>
+    <PRODUCTNAME>Zvlhčovač vzduchu Stadler Form Oskar</PRODUCTNAME>
+    <DESCRIPTION>Odpařovací zvlhčovač pro místnosti do 50 m². Nádržka 3,5 l. Bez bílého prachu. Pracuje na principu přirozeného odpařování, takže vzduch nepřevlhčí. Hlučnost v nočním režimu 25 dB, příkon 15 W. Filtrační kazetu je vhodné měnit jednou za 3 měsíce.</DESCRIPTION>
+    <URL>https://www.domacipomocnik.example/stadler-form-oskar</URL>
+    <IMGURL>https://www.domacipomocnik.example/img/oskar.jpg</IMGURL>
+    <PRICE_VAT>3290</PRICE_VAT>
+    <MANUFACTURER>Stadler Form</MANUFACTURER>
+    <CATEGORYTEXT>Heureka.cz | Domácnost | Zvlhčovače vzduchu</CATEGORYTEXT>
+    <EAN>7640123456785</EAN>
+    <DELIVERY_DATE>2</DELIVERY_DATE>
+    <PARAM><PARAM_NAME>Plocha místnosti</PARAM_NAME><VAL>do 50 m²</VAL></PARAM>
+    <PARAM><PARAM_NAME>Objem nádržky</PARAM_NAME><VAL>3,5 l</VAL></PARAM>
+    <PARAM><PARAM_NAME>Princip</PARAM_NAME><VAL>odpařovací</VAL></PARAM>
+    <PARAM><PARAM_NAME>Hlučnost v nočním režimu</PARAM_NAME><VAL>25 dB</VAL></PARAM>
+  </SHOPITEM>
+</SHOP>
