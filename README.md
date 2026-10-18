@@ -25,3 +25,9 @@ Každý obsahuje: poznatky z konferencie, dáta/protokoly, trh a konkurenciu v C
 | bonus (6) | [07-deep-dive-gtm-cee-data.md](07-deep-dive-gtm-cee-data.md) | GTM engineering na CEE dátach („Clay pre CEE“) |
 | [conference/sessions-podla-trackov.md](conference/sessions-podla-trackov.md) | Kompletný program (561 sessions) zoradený podľa trackov, so speakermi a firmami |
 | `conference/sessions.json`, `conference/speakers.json` | Surové dáta z https://ai.engineer/worldsfair/2026/ |
+
+### Demá
+
+| Súbor | Čo |
+|---|---|
+| [demo-agent-ready-eshop/](demo-agent-ready-eshop/README.md) | #3 AI readiness audit e-shopu z Heureka feedu – skóre dát, AI boty, schema.org, AI obohatenie s kontrolou halucinácií, viditeľnosť v AI |
