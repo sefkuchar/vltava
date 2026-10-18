@@ -30,4 +30,5 @@ Každý obsahuje: poznatky z konferencie, dáta/protokoly, trh a konkurenciu v C
 
 | Súbor | Čo |
 |---|---|
+| [11-biznis-model-agent-ready-eshopy.md](11-biznis-model-agent-ready-eshopy.md) | #3 Biznis model: mini-audit zdarma → nasadenie → mesačné predplatné |
 | [demo-agent-ready-eshop/](demo-agent-ready-eshop/README.md) | #3 AI readiness audit e-shopu z Heureka feedu – skóre dát, AI boty, schema.org, AI obohatenie s kontrolou halucinácií, viditeľnosť v AI |
