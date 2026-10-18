@@ -1,0 +1,35 @@
+{
+  "_note": "Test viditeľnosti urobený ručne v Claude Code cez webové vyhľadávanie (18. 10. 2026, vyhľadávanie z USA, nie lokalita CZ). Formát = eshop.visibility.Probe.",
+  "probes": [
+    {
+      "prompt": "Jakou úzkou pračku do paneláku do 12 000 Kč a kde ji koupit?",
+      "answer": "Doporučeny modely Candy CS4, Indesit BWSA, Hoover HW4; jako místo nákupu hlavně Datart.cz (filtr úzkých praček).",
+      "cited_domains": ["arecenze.cz", "datart.cz"],
+      "mentioned": false
+    },
+    {
+      "prompt": "Nejlepší robotický vysavač s mopem do 9 000 Kč – kde koupit?",
+      "answer": "Doporučeny Xiaomi H50 Pro a X20+; konkrétní obchody nenalezeny, odkaz na srovnávač Heureka a zmínka o Alze.",
+      "cited_domains": ["arecenze.cz"],
+      "mentioned": false
+    },
+    {
+      "prompt": "Pákový kávovar pro začátečníky do 12 000 Kč – doporučení a kde koupit?",
+      "answer": "Doporučeny DeLonghi La Specialista Arte, Sencor SES 1710BK, DeLonghi Dedica; nákup hlavně Alza a Heureka.",
+      "cited_domains": ["arecenze.cz", "planeo.cz", "energozrouti.cz", "delonghi-s2.delonghigroup.com"],
+      "mentioned": false
+    },
+    {
+      "prompt": "Kde koupit kvalitní kreatin monohydrát levně?",
+      "answer": "Žádný český e-shop nenalezen – citovány jen aukce na eBay.de (OstroVit, BulkSupplements, ALL NUTRITION).",
+      "cited_domains": ["ebay.de"],
+      "mentioned": false
+    },
+    {
+      "prompt": "Bezdrátový vysavač pro alergiky a psí chlupy – doporučení a kde koupit?",
+      "answer": "Doporučeny Bosch Unlimited 10 a Dyson V-řada (HEPA); český obchod potvrzen jen zmínkou o Alze.",
+      "cited_domains": ["planeo.cz", "bosch-home.com", "arecenze.cz", "testado.cz", "coolblue.de", "foxnews.com", "bestbuy.ca", "walmart.com"],
+      "mentioned": false
+    }
+  ]
+}

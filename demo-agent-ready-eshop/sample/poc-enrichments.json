@@ -1,0 +1,108 @@
+{
+  "_note": "Obohatenie pripravené ručne v Claude Code (proof of concept, bez API). Formát = eshop.enrich.Enrichment.",
+  "SP-5002": {
+    "product_type": "běžecké boty",
+    "better_name": "Běžecké boty",
+    "short_description": "Boty určené na běhání. Feed neuvádí značku, model, velikost ani typ povrchu, takže je AI asistent nedokáže doporučit ke konkrétní potřebě.",
+    "attributes": [
+      {"name": "Určení", "value": "běh", "source_quote": "boty na běhání"}
+    ],
+    "use_cases": ["běhání"],
+    "faq": [],
+    "missing_info": ["Jaká je značka a model?", "Jaké velikosti jsou skladem?", "Jsou na silnici, nebo do terénu?", "Jaký mají drop a hmotnost?", "Je k dispozici EAN?"]
+  },
+  "PR-1002": {
+    "product_type": "pračka",
+    "better_name": "Pračka Bosch WAN28263BY",
+    "short_description": "Pračka značky Bosch, model WAN28263BY. Feed neobsahuje kapacitu, otáčky, rozměry ani energetickou třídu.",
+    "attributes": [
+      {"name": "Značka", "value": "Bosch", "source_quote": "Pračka Bosch WAN28263BY"},
+      {"name": "Model", "value": "WAN28263BY", "source_quote": "Pračka Bosch WAN28263BY"}
+    ],
+    "use_cases": [],
+    "faq": [],
+    "missing_info": ["Jaká je kapacita v kg?", "Kolik má otáček při ždímání?", "Jaká je hloubka (vejde se do úzké koupelny)?", "Jaká je energetická třída a hlučnost?", "Je k dispozici EAN?"]
+  },
+  "DV-4002": {
+    "product_type": "kreatin monohydrát",
+    "better_name": "Kreatin monohydrát 500 g",
+    "short_description": "Kreatin monohydrát v balení 500 g. Feed neobsahuje popis, výrobce, dávkování ani složení.",
+    "attributes": [
+      {"name": "Hmotnost balení", "value": "500 g", "source_quote": "Kreatin monohydrát 500g"},
+      {"name": "Forma kreatinu", "value": "monohydrát", "source_quote": "Kreatin monohydrát"}
+    ],
+    "use_cases": ["sportovní výživa"],
+    "faq": [],
+    "missing_info": ["Kdo je výrobce?", "Jaké je doporučené dávkování a na kolik dávek balení vystačí?", "Je to čistý kreatin (100 %), nebo obsahuje příměsi?", "Je k dispozici EAN?"]
+  },
+  "VY-2002": {
+    "product_type": "robotický vysavač s mopem",
+    "better_name": "Robotický vysavač s mopem Roborock Q7 Max",
+    "short_description": "Robotický vysavač Roborock Q7 Max s funkcí mopování.",
+    "attributes": [
+      {"name": "Značka", "value": "Roborock", "source_quote": "Roborock Q7 Max"},
+      {"name": "Mopování", "value": "ano", "source_quote": "Robotický vysavač s mopem"}
+    ],
+    "use_cases": ["úklid podlah s vytíráním"],
+    "faq": [{"question": "Umí vysavač i vytírat?", "answer": "Ano, jde o robotický vysavač s mopem."}],
+    "missing_info": ["Jaký má sací výkon (Pa)?", "Jakou má výdrž baterie a plochu na jedno nabití?", "Má mapování a ovládání přes aplikaci?", "Má automatickou vysávací stanici?", "Je k dispozici EAN?"]
+  },
+  "KA-3002": {
+    "product_type": "pákový kávovar",
+    "better_name": "Pákový kávovar Sage the Bambino Plus",
+    "short_description": "Pákový kávovar Sage the Bambino Plus s ohřevem za 3 sekundy a automatickou parní tryskou na mléko. Extrakce probíhá při tlaku 9 barů, nádržka na vodu má 1,9 l.",
+    "attributes": [
+      {"name": "Značka", "value": "Sage", "source_quote": "Sage the Bambino Plus"},
+      {"name": "Doba ohřevu", "value": "3 s", "source_quote": "ohřev za 3 sekundy"},
+      {"name": "Tlak při extrakci", "value": "9 bar", "source_quote": "tlak 9 barů při extrakci"},
+      {"name": "Objem nádržky na vodu", "value": "1,9 l", "source_quote": "nádržka 1,9 l"},
+      {"name": "Napěňování mléka", "value": "automatická parní tryska", "source_quote": "automatická parní tryska na mléko"}
+    ],
+    "use_cases": ["domácí espresso", "příprava cappuccina a latte díky automatické parní trysce", "rychlá příprava kávy bez dlouhého nahřívání"],
+    "faq": [
+      {"question": "Jak rychle je kávovar připraven?", "answer": "Ohřev trvá 3 sekundy."},
+      {"question": "Umí napěnit mléko automaticky?", "answer": "Ano, má automatickou parní trysku na mléko."}
+    ],
+    "missing_info": ["Má vestavěný mlýnek, nebo je potřeba mletá káva?", "Jaký je příkon a rozměry?", "Je k dispozici EAN?"]
+  },
+  "PR-1001": {
+    "product_type": "úzká pračka",
+    "better_name": "Úzká pračka Electrolux EW6SN426BC 6 kg, hloubka 38 cm",
+    "short_description": "Úzká pračka s předním plněním a hloubkou jen 38 cm, vhodná do menší koupelny v paneláku. Kapacita 6 kg, 1200 otáček, energetická třída A, hlučnost při ždímání 76 dB.",
+    "attributes": [
+      {"name": "Typ plnění", "value": "přední", "source_quote": "s předním plněním"},
+      {"name": "Hloubka", "value": "38 cm", "source_quote": "hloubka jen 38 cm"},
+      {"name": "Otáčky při ždímání", "value": "1200 ot./min", "source_quote": "1200 otáček"},
+      {"name": "Energetická třída", "value": "A", "source_quote": "energetická třída A"},
+      {"name": "Hlučnost při ždímání", "value": "76 dB", "source_quote": "Hlučnost při ždímání 76 dB"},
+      {"name": "Parní program", "value": "ano", "source_quote": "Parní program pro osvěžení oblečení"}
+    ],
+    "use_cases": ["malá koupelna v paneláku", "domácnost, která potřebuje úzkou pračku do 40 cm hloubky", "osvěžení oblečení párou"],
+    "faq": [
+      {"question": "Vejde se pračka do úzké koupelny?", "answer": "Má hloubku jen 38 cm a je určena i do menších koupelen v paneláku."},
+      {"question": "Jak je pračka hlučná?", "answer": "Při ždímání má hlučnost 76 dB."},
+      {"question": "Kolik prádla vypere?", "answer": "Kapacita je 6 kg."}
+    ],
+    "missing_info": ["Jaká je šířka a výška?", "Jaká je spotřeba vody a energie na cyklus?"]
+  },
+  "VY-2001": {
+    "product_type": "bezdrátový tyčový vysavač",
+    "better_name": "Bezdrátový tyčový vysavač Dyson V12 Detect Slim s HEPA filtrací",
+    "short_description": "Bezdrátový tyčový vysavač s laserovou detekcí prachu a výdrží baterie až 60 minut. Váží 2,2 kg, HEPA filtrace zachytí 99,99 % částic a je vhodný pro alergiky. V balení je hubice na zvířecí chlupy.",
+    "attributes": [
+      {"name": "Napájení", "value": "bezdrátový (baterie)", "source_quote": "Bezdrátový tyčový vysavač"},
+      {"name": "Výdrž baterie", "value": "až 60 min", "source_quote": "Výdrž baterie až 60 minut"},
+      {"name": "Hmotnost", "value": "2,2 kg", "source_quote": "hmotnost 2,2 kg"},
+      {"name": "Objem nádoby", "value": "0,35 l", "source_quote": "objem nádoby 0,35 l"},
+      {"name": "Filtrace", "value": "HEPA, 99,99 % částic", "source_quote": "HEPA filtrace zachytí 99,99 % částic"},
+      {"name": "Detekce prachu", "value": "laserová", "source_quote": "s laserovou detekcí prachu"}
+    ],
+    "use_cases": ["domácnost s alergikem", "domácnost se zvířaty – hubice na chlupy v balení", "rychlý úklid bez kabelu"],
+    "faq": [
+      {"question": "Je vhodný pro alergiky?", "answer": "Ano, HEPA filtrace zachytí 99,99 % částic a výrobce ho uvádí jako vhodný pro alergiky."},
+      {"question": "Jak dlouho vydrží baterie?", "answer": "Až 60 minut."},
+      {"question": "Hodí se na zvířecí chlupy?", "answer": "Součástí balení je hubice na zvířecí chlupy."}
+    ],
+    "missing_info": ["Jak dlouho se baterie nabíjí?", "Je baterie vyměnitelná?"]
+  }
+}

@@ -100,8 +100,13 @@ def enrich(product: Product, client: anthropic.Anthropic) -> Result:
         return Result(product, None, error=f"{type(e).__name__}: {e}")
     if resp.stop_reason == "refusal" or resp.parsed_output is None:
         return Result(product, None, error=f"Model nevrátil data (stop_reason={resp.stop_reason})")
-    result = Result(product, resp.parsed_output)
-    for attr in resp.parsed_output.attributes:
+    return check(product, resp.parsed_output)
+
+
+def check(product: Product, data: Enrichment) -> Result:
+    """Overí každý parameter proti zdrojovým dátam produktu (platí pre výstup z API aj ručne pripravený)."""
+    result = Result(product, data)
+    for attr in data.attributes:
         reason = verify_attribute(attr, product.source_text)
         if reason:
             result.rejected.append((attr, reason))

@@ -25,6 +25,8 @@ def main() -> None:
     parser.add_argument("--pages", type=int, default=5, help="koľko produktových stránok skontrolovať")
     parser.add_argument("--enrich", type=int, default=0, help="koľko najslabších produktov obohatiť cez AI")
     parser.add_argument("--visibility", type=int, default=0, help="koľko zákazníckych dopytov otestovať v AI")
+    parser.add_argument("--enrichments", help="JSON s hotovým obohatením {ITEM_ID: Enrichment} namiesto volania API")
+    parser.add_argument("--probes", help="JSON s hotovými výsledkami testu viditeľnosti namiesto volania API")
     parser.add_argument("--out", default="out", help="výstupný priečinok")
     parser.add_argument("--open", action="store_true", help="otvoriť report v prehliadači")
     args = parser.parse_args()
@@ -64,6 +66,27 @@ def main() -> None:
                   f"schema.org Product: {with_schema}/{len(site_report.pages)} stránok")
 
     results, probes = [], []
+    if args.enrichments:
+        # Ručný / offline režim: obohatenie pripravené mimo API, prejde tou istou kontrolou ako výstup z API
+        from eshop import enrich, outputs
+
+        by_id = {p.item_id: p for p in products}
+        data = json.loads(Path(args.enrichments).read_text(encoding="utf-8"))
+        for item_id, payload in data.items():
+            if item_id.startswith("_") or item_id not in by_id:
+                continue
+            r = enrich.check(by_id[item_id], enrich.Enrichment.model_validate(payload))
+            results.append(r)
+            print(f"✨ {r.product.name}: {len(r.verified)} overených parametrov, {len(r.rejected)} zamietnutých")
+        files = outputs.write_all(products, {r.product.item_id: r for r in results}, source, out)
+        print("   výstupy:", ", ".join(str(p) for p in files.values()))
+    if args.probes:
+        from eshop.visibility import Probe
+
+        raw = json.loads(Path(args.probes).read_text(encoding="utf-8"))["probes"]
+        probes = [Probe(**{k: v for k, v in p.items() if k in Probe.__dataclass_fields__}) for p in raw]
+        for pr in probes:
+            print(f"🔍 {'✅' if pr.mentioned else '❌'} {pr.prompt}")
     if args.enrich or args.visibility:
         import anthropic
 

@@ -40,6 +40,24 @@ export ANTHROPIC_API_KEY=sk-ant-...
 
 Model sa dá zmeniť cez `CLAUDE_MODEL` (predvolený `claude-opus-5-5`).
 
+### Proof of concept bez API kľúča (ručný režim)
+
+AI kroky sa dajú urobiť aj ručne, napríklad v Claude Code, a výsledky načítať zo súboru. Prejdú tou istou kontrolou
+halucinácií a tým istým generátorom reportu:
+
+```bash
+.venv/bin/python audit.py --feed sample/heureka-sample.xml \
+  --enrichments sample/poc-enrichments.json --probes sample/poc-probes.json --open
+```
+
+Výsledok PoC na ukážkovom feede (18. 10. 2026):
+- 7 produktov obohatených, 24 parametrov a všetky prešli kontrolou proti zdroju.
+- Pri 3 najslabších produktoch sa skoro nedalo čo obohatiť (napr. „Boty – Pohodlné boty na běhání“). Report im namiesto toho vypíše, čo majú doplniť.
+- Viditeľnosť v 5 dopytoch: AI cituje hlavne **arecenze.cz** a **datart.cz** a odporúča **Alzu a Heureku**. Pri kreatíne nenašla žiadny CZ e-shop, len eBay.de, a to je príležitosť pre CZ obchody so športovou výživou.
+- Vyhľadávanie bežalo z USA. Skript v API móde používa lokalitu CZ, takže výsledky môžu byť iné.
+
+Ručný režim je vhodný na prvé audity zdarma. Pri 10+ obchodoch týždenne treba API, inak sa to nedá škálovať.
+
 ## Overené pri vývoji
 
 - Parsovanie feedu, skóre a výstupy: na ukážkovom feede.
